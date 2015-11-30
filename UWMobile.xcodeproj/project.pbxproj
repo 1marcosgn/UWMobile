@@ -13,6 +13,8 @@
 		7F4A30FC1C0B8911000E983A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A30FA1C0B8911000E983A /* Main.storyboard */; };
 		7F4A30FE1C0B8911000E983A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A30FD1C0B8911000E983A /* Assets.xcassets */; };
 		7F4A31011C0B8911000E983A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A30FF1C0B8911000E983A /* LaunchScreen.storyboard */; };
+		C8A67AB31C0C3B8000FAAE64 /* HKMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A67AB01C0C3B8000FAAE64 /* HKMenuView.m */; };
+		C8A67AB41C0C3B8000FAAE64 /* RotationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A67AB21C0C3B8000FAAE64 /* RotationNavigationController.m */; };
 		E7DB567008547A90064FDB6C /* libPods-UWMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 951D4A1F72DE20932DAEB715 /* libPods-UWMobile.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,10 @@
 		951D4A1F72DE20932DAEB715 /* libPods-UWMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UWMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BFB59C68D1920DAB98E0AA /* Pods-UWMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UWMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-UWMobile/Pods-UWMobile.release.xcconfig"; sourceTree = "<group>"; };
 		C02D4E1C405A1619A343DB9F /* Pods-UWMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UWMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UWMobile/Pods-UWMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		C8A67AAF1C0C3B8000FAAE64 /* HKMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKMenuView.h; sourceTree = "<group>"; };
+		C8A67AB01C0C3B8000FAAE64 /* HKMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKMenuView.m; sourceTree = "<group>"; };
+		C8A67AB11C0C3B8000FAAE64 /* RotationNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationNavigationController.h; sourceTree = "<group>"; };
+		C8A67AB21C0C3B8000FAAE64 /* RotationNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		7F4A30F01C0B8911000E983A /* UWMobile */ = {
 			isa = PBXGroup;
 			children = (
+				C8A67AAE1C0C3B8000FAAE64 /* Navigation */,
 				7F4A30F41C0B8911000E983A /* AppDelegate.h */,
 				7F4A30F51C0B8911000E983A /* AppDelegate.m */,
 				7F4A30F71C0B8911000E983A /* ViewController.h */,
@@ -101,6 +108,17 @@
 				A4BFB59C68D1920DAB98E0AA /* Pods-UWMobile.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8A67AAE1C0C3B8000FAAE64 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C8A67AAF1C0C3B8000FAAE64 /* HKMenuView.h */,
+				C8A67AB01C0C3B8000FAAE64 /* HKMenuView.m */,
+				C8A67AB11C0C3B8000FAAE64 /* RotationNavigationController.h */,
+				C8A67AB21C0C3B8000FAAE64 /* RotationNavigationController.m */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +244,8 @@
 			files = (
 				7F4A30F91C0B8911000E983A /* ViewController.m in Sources */,
 				7F4A30F61C0B8911000E983A /* AppDelegate.m in Sources */,
+				C8A67AB41C0C3B8000FAAE64 /* RotationNavigationController.m in Sources */,
+				C8A67AB31C0C3B8000FAAE64 /* HKMenuView.m in Sources */,
 				7F4A30F31C0B8911000E983A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

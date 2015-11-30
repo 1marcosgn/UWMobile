@@ -8,15 +8,41 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate ()<HKSlideMenu3DControllerDelegate>
+{
+    HKMenuView *menuVC;
+    RotationNavigationController *navMain;
+}
 @end
 
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    self.slideMenuVC = [[HKSlideMenu3DController alloc] init];
+    self.slideMenuVC.view.frame = [[UIScreen mainScreen]bounds];
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    menuVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"HKMenuView"];
+    menuVC.view.backgroundColor = [UIColor clearColor];
+    navMain = (RotationNavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"MainNavController"];
+    
+    self.slideMenuVC.menuViewController = menuVC;
+    self.slideMenuVC.mainViewController = navMain;
+    
+    self.slideMenuVC.backgroundImage = [UIImage imageNamed:@"cloud"];
+    self.slideMenuVC.backgroundImageContentMode = UIViewContentModeBottomLeft;
+    self.slideMenuVC.enablePan = NO;
+    
+    self.slideMenuVC.delegate = menuVC.self;
+    
+    [self.window setRootViewController:self.slideMenuVC];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -40,6 +66,26 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
++ (AppDelegate *)mainDelegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+-(void)setFirstView
+{
+    if (!navMain)
+    {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        navMain = (RotationNavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"MainNavController   "];
+    }
+    self.slideMenuVC.mainViewController = navMain;
+}
+
+-(void)setSecondView
+{
+    //something else here...
 }
 
 @end
