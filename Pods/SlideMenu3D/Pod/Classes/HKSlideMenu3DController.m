@@ -48,14 +48,13 @@
     _bgImageContainer.contentMode = UIViewContentModeScaleAspectFill;// UIViewContentModeTopLeft;
     _bgImageContainer.layer.zPosition = -2000;
     [self.view addSubview:_bgImageContainer];
-    _bgImageContainer.backgroundColor = [UIColor redColor];
     
     [_bgImageContainer setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSArray *imageViewConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[bgImage]|" options:0 metrics:nil views:@{@"bgImage": _bgImageContainer}];
     [self.view addConstraints:imageViewConstraints];
     imageViewConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[bgImage]|" options:0 metrics:nil views:@{@"bgImage": _bgImageContainer}];
     [self.view addConstraints:imageViewConstraints];
-    
+
     
     _menuContainer = [[UIViewController alloc] init];
     _menuContainer.view.layer.anchorPoint = CGPointMake(1.0, 0.5);

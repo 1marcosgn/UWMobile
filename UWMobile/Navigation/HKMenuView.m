@@ -9,6 +9,13 @@
 #import "HKMenuView.h"
 #import "AppDelegate.h"
 
+#define kUWMenuElements @"UWMenuElements"
+#define kCellIdentifier @"CellIdentifier"
+#define kTitle @"title"
+#define kAction @"action"
+#define kOpenViewController @"openViewController"
+#define kOpenTableViewController @"openTableViewController"
+
 @interface HKMenuView ()
 {
     NSArray *images;
@@ -19,19 +26,25 @@
 
 @implementation HKMenuView
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //images = @[@"mail",@"call-ico",@"camera-ico",@"contacts-ico",@"settings-ico"];
-    titles = @[@"directory",@"news",@"library",@"events"];
+    titles = [self getElements];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView reloadData];
+}
+
+-(NSArray *)getElements
+{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:kUWMenuElements ofType:@"plist"];
+    NSArray *propertyListValues = [NSArray arrayWithContentsOfFile:plistPath];
+    return propertyListValues;
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,7 +69,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString* cellIdentifier = @"CellIdentifier";
+    static NSString* cellIdentifier = kCellIdentifier;
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil)
@@ -64,10 +77,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [titles objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[titles objectAtIndex:indexPath.row] valueForKey:kTitle];
     
     UIFont *currentFont = cell.textLabel.font;
-    UIFont *correctFont = [UIFont fontWithName:currentFont.fontName size:currentFont.pointSize+5];
+    UIFont *correctFont = [UIFont fontWithName:currentFont.fontName size:22];
     cell.textLabel.font = correctFont;
     
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -85,13 +98,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row % 2)
+    NSString *actionToPerform = [[titles objectAtIndex:indexPath.row] valueForKey:kAction];
+    
+    if ([actionToPerform isEqualToString:kOpenViewController])
     {
-        [[AppDelegate mainDelegate] setSecondView];
+        [[AppDelegate mainDelegate] openViewController];
     }
-    else
+    else if ([actionToPerform isEqualToString:kOpenTableViewController])
     {
-        [[AppDelegate mainDelegate] setFirstView];
+        [[AppDelegate mainDelegate] openTableViewController];
     }
 }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>directory</string>
+		<key>action</key>
+		<string>openViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>news</string>
+		<key>action</key>
+		<string>openTableViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>library</string>
+		<key>action</key>
+		<string>openTableViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>events</string>
+		<key>action</key>
+		<string>openTableViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>connect</string>
+		<key>action</key>
+		<string>openViewController</string>
+	</dict>
+</array>
+</plist>

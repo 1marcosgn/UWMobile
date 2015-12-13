@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F393E511C1D11820027643E /* UWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F393E4F1C1D11820027643E /* UWViewController.m */; };
+		7F393E521C1D11820027643E /* UWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F393E501C1D11820027643E /* UWViewController.xib */; };
+		7F393E561C1D11A80027643E /* UWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F393E541C1D11A80027643E /* UWTableViewController.m */; };
+		7F393E571C1D11A80027643E /* UWTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F393E551C1D11A80027643E /* UWTableViewController.xib */; };
 		7F4A30F31C0B8911000E983A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A30F21C0B8911000E983A /* main.m */; };
 		7F4A30F61C0B8911000E983A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A30F51C0B8911000E983A /* AppDelegate.m */; };
 		7F4A30F91C0B8911000E983A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A30F81C0B8911000E983A /* ViewController.m */; };
 		7F4A30FC1C0B8911000E983A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A30FA1C0B8911000E983A /* Main.storyboard */; };
 		7F4A30FE1C0B8911000E983A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A30FD1C0B8911000E983A /* Assets.xcassets */; };
 		7F4A31011C0B8911000E983A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A30FF1C0B8911000E983A /* LaunchScreen.storyboard */; };
+		7FD044791C1187A200BFC703 /* UWMenuElements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FD044781C1187A200BFC703 /* UWMenuElements.plist */; };
 		C8A67AB31C0C3B8000FAAE64 /* HKMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A67AB01C0C3B8000FAAE64 /* HKMenuView.m */; };
 		C8A67AB41C0C3B8000FAAE64 /* RotationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A67AB21C0C3B8000FAAE64 /* RotationNavigationController.m */; };
 		E7DB567008547A90064FDB6C /* libPods-UWMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 951D4A1F72DE20932DAEB715 /* libPods-UWMobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F393E4E1C1D11820027643E /* UWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWViewController.h; sourceTree = "<group>"; };
+		7F393E4F1C1D11820027643E /* UWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWViewController.m; sourceTree = "<group>"; };
+		7F393E501C1D11820027643E /* UWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UWViewController.xib; sourceTree = "<group>"; };
+		7F393E531C1D11A80027643E /* UWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWTableViewController.h; sourceTree = "<group>"; };
+		7F393E541C1D11A80027643E /* UWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWTableViewController.m; sourceTree = "<group>"; };
+		7F393E551C1D11A80027643E /* UWTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UWTableViewController.xib; sourceTree = "<group>"; };
 		7F4A30EE1C0B8911000E983A /* UWMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UWMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4A30F21C0B8911000E983A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F4A30F41C0B8911000E983A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +40,7 @@
 		7F4A30FD1C0B8911000E983A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F4A31001C0B8911000E983A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F4A31021C0B8911000E983A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FD044781C1187A200BFC703 /* UWMenuElements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UWMenuElements.plist; sourceTree = "<group>"; };
 		951D4A1F72DE20932DAEB715 /* libPods-UWMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UWMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BFB59C68D1920DAB98E0AA /* Pods-UWMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UWMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-UWMobile/Pods-UWMobile.release.xcconfig"; sourceTree = "<group>"; };
 		C02D4E1C405A1619A343DB9F /* Pods-UWMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UWMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UWMobile/Pods-UWMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +62,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F393E4D1C1D11680027643E /* UWViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7F393E4E1C1D11820027643E /* UWViewController.h */,
+				7F393E4F1C1D11820027643E /* UWViewController.m */,
+				7F393E501C1D11820027643E /* UWViewController.xib */,
+				7F393E531C1D11A80027643E /* UWTableViewController.h */,
+				7F393E541C1D11A80027643E /* UWTableViewController.m */,
+				7F393E551C1D11A80027643E /* UWTableViewController.xib */,
+			);
+			path = UWViewController;
+			sourceTree = "<group>";
+		};
+		7F393E581C1D57090027643E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F393E591C1D57090027643E /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7F393E591C1D57090027643E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		7F4A30E51C0B8911000E983A = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +111,9 @@
 		7F4A30F01C0B8911000E983A /* UWMobile */ = {
 			isa = PBXGroup;
 			children = (
+				7F393E581C1D57090027643E /* Resources */,
+				7F393E4D1C1D11680027643E /* UWViewController */,
+				7FD044771C11877B00BFC703 /* Configuration */,
 				C8A67AAE1C0C3B8000FAAE64 /* Navigation */,
 				7F4A30F41C0B8911000E983A /* AppDelegate.h */,
 				7F4A30F51C0B8911000E983A /* AppDelegate.m */,
@@ -91,6 +134,14 @@
 				7F4A30F21C0B8911000E983A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FD044771C11877B00BFC703 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7FD044781C1187A200BFC703 /* UWMenuElements.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		A087C7880888F24F2CF49210 /* Frameworks */ = {
@@ -181,7 +232,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD044791C1187A200BFC703 /* UWMenuElements.plist in Resources */,
 				7F4A31011C0B8911000E983A /* LaunchScreen.storyboard in Resources */,
+				7F393E521C1D11820027643E /* UWViewController.xib in Resources */,
+				7F393E571C1D11A80027643E /* UWTableViewController.xib in Resources */,
 				7F4A30FE1C0B8911000E983A /* Assets.xcassets in Resources */,
 				7F4A30FC1C0B8911000E983A /* Main.storyboard in Resources */,
 			);
@@ -246,7 +300,9 @@
 				7F4A30F61C0B8911000E983A /* AppDelegate.m in Sources */,
 				C8A67AB41C0C3B8000FAAE64 /* RotationNavigationController.m in Sources */,
 				C8A67AB31C0C3B8000FAAE64 /* HKMenuView.m in Sources */,
+				7F393E511C1D11820027643E /* UWViewController.m in Sources */,
 				7F4A30F31C0B8911000E983A /* main.m in Sources */,
+				7F393E561C1D11A80027643E /* UWTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
