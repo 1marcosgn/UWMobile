@@ -1,0 +1,10 @@
+PODS:
+  - SlideMenu3D (0.1.5)
+
+DEPENDENCIES:
+  - SlideMenu3D (~> 0.1)
+
+SPEC CHECKSUMS:
+  SlideMenu3D: 2acf790c19c7a97d3699cdfec9d0fc35125700ee
+
+COCOAPODS: 0.39.0

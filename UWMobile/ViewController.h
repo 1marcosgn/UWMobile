@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import <HKSlideMenu3DController.h>
 
 @interface ViewController : UIViewController
-
 
 @end
 
